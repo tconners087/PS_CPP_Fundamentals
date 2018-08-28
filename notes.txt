@@ -1,0 +1,8 @@
+'*.h' files indicate header files. '*.cpp' files often implement functions contained in .h files;
+therefore, .h files must be included in .cpp files.
+
+A .cpp file implementing a class templated in a .h file has access to private variables in the included .h file.
+
+In main, the header .h file of a class is included and allows class instantiation and function calls,
+even though the function may exist in the .h file's associated .cpp file.
+
