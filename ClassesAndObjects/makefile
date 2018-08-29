@@ -1,2 +1,2 @@
 all:
-	g++ ClassesAndObjects.cpp person.cpp tweeter.cpp person.h status.h tweeter.h -o ClassesAndObjects
+	g++ ./Source/ClassesAndObjects.cpp ./Source/person.cpp ./Source/tweeter.cpp ./Headers/person.h ./Headers/status.h ./Headers/tweeter.h -o ClassesAndObjects

@@ -1,4 +1,4 @@
-#include "person.h"
+#include "../Headers/person.h"
 #include <iostream>
 using std::cout;
 using std::endl;

@@ -1,6 +1,6 @@
-#include "person.h" //now included in tweeter.h
-#include "tweeter.h"
-#include "status.h"
+#include "../Headers/person.h" //now included in tweeter.h
+#include "../Headers/tweeter.h"
+#include "../Headers/status.h"
 #include <iostream>
 using std::cout;
 using std::endl;
