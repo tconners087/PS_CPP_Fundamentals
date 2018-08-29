@@ -3,6 +3,53 @@ therefore, .h files must be included in .cpp files.
 
 A .cpp file implementing a class templated in a .h file has access to private variables in the included .h file.
 
-In main, the header .h file of a class is included and allows class instantiation and function calls,
-even though the function may exist in the .h file's associated .cpp file.
+In main, the header .h file of a class is included and allows class instantiation and function calls.
 
+'#pragma once' tells the preprocessor to reject duplicate class definitions that may result from inheritence. 
+
+'if' statements function as in C#/C.
+
+'while' and 'break' function the same as in C#.
+
+'for' functions the same as in C#, Java, etc.
+
+switch(expression)
+{
+    case val1:
+        //action
+        break;
+    default:
+        //action
+}
+
+'switch' statements function like other languages, too.
+
+Scoping switch expressions:
+
+switch(Thing t = someFunction(stuff); t.getStatus())
+{
+    case val1:
+        break;
+    default:
+    //action
+}
+
+This will ensure t's destructor is called when switch has fully executed.
+
+ternary operators (immediate if)
+
+result = something? 7 : 302; //same as C#
+
+
+Passing by reference:
+
+If I'm passing by reference to save on performance, but I do not want the called function to affect the original object, pass by const reference:
+
+// header declaration must be identical
+bool is2MorePrime(int const& x)
+{
+    //cannot alter x here but I can reference x
+}
+
+Returning a reference can be problematic if the reference is dangling. Dangling means that the reference returned is of a memory location freed by the destructor upon becoming out of scope.
+The reference would still reference the memory location, but whatever is stored there cannot truly be accounted for reliably. 
