@@ -1,23 +1,28 @@
 #include "person.h"
 #include <iostream>
+using std::cout;
+using std::endl;
+
+// or using namespace std;
+
 // Constructor using initializer syntax
 Person::Person(std::string first, std::string last, int arbitrary) :
     firstname(first), lastname(last), arbitrarynumber(arbitrary)
 {
-    std::cout << "constructing..." << 
-        firstname << " " << lastname << std::endl;
+    cout << "constructing..." << 
+        firstname << " " << lastname << endl;
 }
 
 Person::Person() : arbitrarynumber(0)
 {
-    std::cout << "constructing..." << 
-        firstname << " " << lastname << std::endl;
+    cout << "constructing..." << 
+        firstname << " " << lastname << endl;
 }
 
 Person::~Person()
 {
-    std::cout << "destructing..." << 
-        firstname << " " << lastname << std::endl;
+    cout << "destructing..." << 
+        firstname << " " << lastname << endl;
 }
 
 std::string Person::getName()
