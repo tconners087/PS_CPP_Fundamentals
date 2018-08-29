@@ -19,11 +19,17 @@ int main()
     Status s = Pending;
     s = Approved;
 
+    cout << "Status s: " << s << endl;
+
     FileError fe = FileError::notfound;
     fe = FileError::ok;
 
+    cout << "FileError fe: " << static_cast<int>(fe) << endl;
+
     NetworkError ne = NetworkError::disconnected;
     ne = NetworkError::ok;
+
+    cout << "NetworkError ne: " << static_cast<int>(ne) << endl;
 
     return 0;
 }
